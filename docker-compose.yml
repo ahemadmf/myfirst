@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  Kepler:
+    image: fms-kepler-19012021
+    ports:
+      - "8086:8086"
+    volumes:
+      - /opt/FMS/FMS_NEW/FindMySpare_k/html:/opt/html
+  FMS:
+    image: fms-19012021
+    ports:
+      - "8080:8080"
+    volumes:
+      - /opt/FMS/FMS_NEW:/usr/local/tomcat/webapps
+
+
+
+
